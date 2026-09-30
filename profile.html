@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>内田美和｜プロフィール・活動</title>
+<meta name="description" content="内田美和のプロフィール、教室、AIを活用したサポート、メディア・登壇・講演に関する活動紹介。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FFFFFF;--ink:#0B1F4D;--ink-soft:#6A675C;
+    --pine:#0B1F4D;--pine-2:#2E6B4F;--kaki:#59C7F5;
+    --photo:#F1EFE7;--line:#E7E4DB;--line-soft:#F0EEE7;
+    --mincho:"Zen Old Mincho",serif;--sans:"Zen Kaku Gothic New",system-ui,sans-serif;--latin:"Fraunces",Georgia,serif;
+    --head-h:66px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.9;font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  ::selection{background:var(--pine);color:#fff;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px;width:100%;}
+  @media(max-width:640px){.wrap{padding:0 22px;}}
+
+  /* header / tabs */
+  header.top{position:sticky;top:0;z-index:60;height:var(--head-h);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 40px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  @media(max-width:640px){header.top{padding:0 16px;}}
+  .brand{font-family:var(--mincho);font-weight:700;font-size:1rem;letter-spacing:.05em;white-space:nowrap;}
+  .brand b{color:var(--pine);}
+  .tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;min-width:0;overscroll-behavior-inline:contain;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab{border:none;background:none;cursor:pointer;white-space:nowrap;font-family:var(--sans);font-size:.83rem;color:var(--ink-soft);letter-spacing:.02em;padding:10px 12px;position:relative;transition:color .2s;}
+  .tab:hover{color:var(--ink);}
+  .tab[aria-selected="true"]{color:var(--pine);font-weight:700;}
+  .tab[aria-selected="true"]::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:2px;background:var(--pine);}
+  .tab.lec[aria-selected="true"]{color:var(--kaki);}
+  .tab.lec[aria-selected="true"]::after{background:var(--kaki);}
+  @media(max-width:900px){.brand{font-size:.82rem;}.tab{font-size:.72rem;padding:8px 6px;}}
+
+  /* panels */
+  .panel{display:none;min-height:calc(100vh - var(--head-h));padding:56px 0 96px;}
+  .panel.active{display:block;animation:fade .5s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  .eyebrow{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--pine);margin:0 0 18px;}
+  .sec-title{font-family:var(--mincho);font-weight:600;font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.4;letter-spacing:.03em;margin:0 0 30px;}
+  .block{padding-top:44px;margin-top:44px;border-top:1px solid var(--line);}
+
+  /* HOME */
+  .home{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center;}
+  @media(max-width:860px){.home{grid-template-columns:1fr;gap:30px;}}
+  .home .kicker{font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.02em;color:var(--pine);}
+  .home h1{font-family:var(--mincho);font-weight:900;font-size:clamp(2.7rem,7.5vw,4.6rem);line-height:1.06;letter-spacing:.06em;margin:16px 0 8px;}
+  .home .romaji{font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);letter-spacing:.02em;}
+  .home .role{font-size:.93rem;color:var(--pine);margin:20px 0 0;line-height:1.9;}
+  .home .lead{color:var(--ink-soft);font-size:.94rem;margin:16px 0 0;max-width:40ch;}
+  .home .lead b{color:var(--pine);}
+  .home-photo{aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:var(--photo);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;}
+  .home-photo img{width:100%;height:100%;object-fit:cover;}
+  .home-photo .ph{font-family:var(--latin);font-size:.8rem;color:var(--ink-soft);text-align:center;padding:0 16px;}
+  .home-photo::before{content:"MIWA UCHIDA";position:absolute;left:14px;bottom:12px;font-family:var(--latin);font-style:italic;font-size:.72rem;color:var(--pine);background:rgba(255,255,255,.78);padding:3px 10px;border-radius:100px;}
+  .ledger{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:44px;}
+  @media(max-width:520px){.ledger{grid-template-columns:repeat(2,1fr);}}
+  .ledger .cell{padding:20px 6px;border-right:1px solid var(--line);}
+  .ledger .cell:last-child{border-right:none;}
+  @media(max-width:520px){.ledger .cell:nth-child(2n){border-right:none;}.ledger .cell:nth-child(1),.ledger .cell:nth-child(2){border-bottom:1px solid var(--line);}}
+  .ledger .num{font-family:var(--mincho);font-weight:700;font-size:1.5rem;line-height:1;color:var(--pine);}
+  .ledger .num small{font-size:.82rem;margin-left:2px;font-weight:500;}
+  .ledger .lbl{font-family:var(--sans);font-size:.74rem;letter-spacing:.02em;color:var(--ink-soft);margin-top:8px;}
+  .reach{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);margin-bottom:22px;}
+  @media(max-width:520px){.reach{grid-template-columns:1fr;}}
+  .reach .rc{padding:22px;border-right:1px solid var(--line);}
+  .reach .rc:last-child{border-right:none;}
+  @media(max-width:520px){.reach .rc{border-right:none;border-bottom:1px solid var(--line);}.reach .rc:last-child{border-bottom:none;}}
+  .reach .big{font-family:var(--mincho);font-weight:700;font-size:1.5rem;color:var(--pine);line-height:1;}
+  .reach .cap{font-size:.8rem;color:var(--ink-soft);margin-top:8px;}
+  .sns{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  @media(max-width:640px){.sns{grid-template-columns:1fr;}}
+  .sns a{text-decoration:none;padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;transition:.2s;}
+  .sns a:hover{background:var(--line-soft);color:var(--pine);}
+  .sns .name{font-family:var(--mincho);font-weight:600;font-size:1rem;}
+  .sns .handle{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);}
+  .sns .arrow{margin-left:auto;font-family:var(--latin);color:var(--kaki);}
+
+  /* profile */
+  .prof{display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:start;}
+  @media(max-width:820px){.prof{grid-template-columns:1fr;gap:26px;}}
+  .prof-photo{aspect-ratio:3/4;border-radius:4px;overflow:hidden;background:var(--photo);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;}
+  .prof-photo img{width:100%;height:100%;object-fit:cover;}
+  .prof-photo .ph{font-family:var(--latin);font-size:.74rem;color:var(--ink-soft);text-align:center;padding:0 12px;}
+  .bio p{margin:0 0 16px;font-size:.96rem;color:#2f2e27;max-width:62ch;}
+  .bio p:first-child{font-family:var(--mincho);font-size:1.1rem;line-height:1.85;}
+  .bio b{color:var(--pine);}
+  .cred{display:grid;grid-template-columns:1fr 1fr;gap:6px 40px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line);}
+  @media(max-width:560px){.cred{grid-template-columns:1fr;}}
+  .cred h4{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.02em;color:var(--kaki);margin:0 0 6px;grid-column:1 / -1;}
+  .cred ul{list-style:none;margin:0;padding:0;}
+  .cred li{font-size:.86rem;padding:4px 0;color:#3a392f;display:flex;gap:8px;}
+  .cred li::before{content:"—";color:var(--pine);}
+
+  /* faq */
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq details:first-of-type{border-top:1px solid var(--line);}
+  .faq summary{cursor:pointer;list-style:none;padding:18px 44px 18px 0;position:relative;font-family:var(--mincho);font-weight:600;font-size:1.05rem;line-height:1.6;transition:color .2s;}
+  .faq summary:hover{color:var(--pine);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"";position:absolute;right:6px;top:26px;width:11px;height:11px;border-right:1.5px solid var(--pine);border-bottom:1.5px solid var(--pine);transform:rotate(45deg);transition:transform .3s;}
+  .faq details[open] summary::after{transform:rotate(-135deg);}
+  .faq .qmark{font-family:var(--latin);font-style:italic;color:var(--kaki);margin-right:10px;}
+  .faq .ans{padding:0 44px 22px 0;color:#3a392f;font-size:.94rem;max-width:66ch;}
+
+  /* programs */
+  .prog{display:grid;grid-template-columns:120px 130px 1fr;gap:28px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center;}
+  .prog:last-child{border-bottom:none;}
+  @media(max-width:820px){.prog{grid-template-columns:100px minmax(0,1fr);gap:18px;align-items:center;}}
+  @media(max-width:560px){.prog{grid-template-columns:1fr;gap:10px;}}
+  .prog-photo{aspect-ratio:1;border-radius:4px;overflow:hidden;background:var(--photo);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;}
+  .prog-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(.98);}
+  .prog-photo .ph{font-family:var(--latin);font-size:.62rem;color:var(--ink-soft);}
+  @media(max-width:820px){.prog-head{grid-column:auto;min-width:0;}.prog>div:last-child{grid-column:1 / -1;min-width:0;}}
+  .prog .tag{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.02em;color:var(--kaki);}
+  .prog h3{font-family:var(--mincho);font-weight:700;font-size:1.3rem;letter-spacing:.05em;margin:5px 0 0;}
+  .prog .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:4px;}
+  .prog p{margin:0 0 9px;font-size:.9rem;color:#33322b;}
+  .prog p{overflow-wrap:anywhere;word-break:normal;}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;}
+  .chip{font-size:.72rem;background:var(--line-soft);color:var(--pine);padding:4px 10px;border-radius:100px;}
+
+  /* LECTURE */
+  .lec-kicker{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.02em;color:var(--kaki);margin:0 0 14px;}
+  .lec-kicker{display:flex;align-items:center;gap:14px;}
+  .lec-kicker::after{content:"";width:48px;height:1px;background:var(--kaki);}
+  .lecture-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.8fr);gap:48px;align-items:center;margin-bottom:36px;}
+  .lecture-head .lec-lead{margin-bottom:0;}
+  .chapter-art{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);background:#f7f4ec;box-shadow:16px 16px 0 var(--line-soft);}
+  .chapter-art img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(.98);}
+  .lec-title{font-family:var(--mincho);font-weight:700;font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.3;letter-spacing:.04em;margin:0 0 20px;}
+  .lec-lead{font-family:var(--mincho);font-size:clamp(1.05rem,2.4vw,1.35rem);line-height:1.9;color:#2f2e27;max-width:54ch;margin:0 0 40px;}
+  .lec-lead b{color:var(--pine);}
+  .lcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:820px){.lcards{grid-template-columns:1fr;gap:14px;}}
+  .lcard{border:1px solid var(--line);border-radius:6px;padding:24px 22px 20px;background:#fff;cursor:pointer;transition:.2s;display:flex;flex-direction:column;}
+  .lcard:hover{border-color:var(--kaki);transform:translateY(-3px);box-shadow:0 12px 30px -18px rgba(26,26,22,.4);}
+  .lcard .n{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--ink-soft);}
+  .lcard h4{font-family:var(--mincho);font-weight:700;font-size:1.2rem;letter-spacing:.03em;margin:8px 0 10px;}
+  .lcard p{margin:0 0 16px;font-size:.9rem;color:#536581;line-height:1.85;}
+  .lcard .tap{margin-top:auto;font-size:.76rem;color:var(--kaki);font-weight:700;display:flex;align-items:center;gap:5px;}
+  .lcard .tap::after{content:"↗";font-family:var(--latin);}
+  .lnote{margin-top:28px;padding:18px 22px;background:var(--line-soft);border-radius:6px;font-size:.9rem;color:#3a392f;}
+  .lnote b{color:var(--pine);font-family:var(--mincho);}
+  .manifesto{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;margin:-8px 0 34px;padding:20px 0;border-top:1px solid var(--pine);border-bottom:1px solid var(--line);}
+  .manifesto .mark{font-family:var(--latin);font-style:italic;font-size:2rem;line-height:1;color:var(--kaki);}
+  .manifesto p{font-family:var(--mincho);font-size:clamp(1.08rem,2.1vw,1.45rem);line-height:1.75;margin:0;max-width:34ch;}
+  .four-grid{grid-template-columns:repeat(2,1fr);gap:0;counter-reset:feature;}
+  .four-grid .lcard{min-height:230px;padding:26px 32px 24px 0;}
+  .four-grid .lcard:nth-child(even){padding-left:32px;border-left:1px solid var(--line);}
+  .four-grid .lcard:nth-child(n+3){border-top:1px solid var(--line);}
+  .four-grid .lcard:nth-child(3){border-left:0;}
+  .four-grid .lcard h4{font-size:1.34rem;}
+
+  /* guide block (はじめての設定) */
+  .guide-steps{display:grid;gap:26px;}
+  .gstep{display:grid;grid-template-columns:40px 1fr;gap:16px;padding-top:22px;border-top:1px solid var(--line);}
+  .gstep:first-child{padding-top:0;border-top:none;}
+  .gstep .gnum{font-family:var(--mincho);font-weight:700;font-size:1.1rem;color:var(--kaki);}
+  .gstep h4{font-family:var(--mincho);font-weight:700;font-size:1.08rem;letter-spacing:.02em;margin:0 0 8px;}
+  .gstep p{margin:0 0 10px;font-size:.92rem;color:#3a392f;max-width:60ch;}
+  .gstep ul{list-style:none;margin:8px 0 10px;padding:0;}
+  .gstep li{font-size:.92rem;color:#3a392f;padding:3px 0;display:flex;gap:8px;}
+  .gstep li::before{content:"—";color:var(--pine);flex:0 0 auto;}
+  .gprompt{white-space:pre-wrap;font-family:var(--sans);font-size:.88rem;line-height:1.85;color:#2f2e27;background:var(--line-soft);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:10px 0 0;}
+  .gcopy{margin-top:10px;font-family:var(--sans);font-size:.78rem;font-weight:700;color:#fff;background:var(--pine);border:none;border-radius:100px;padding:6px 14px;cursor:pointer;transition:.2s;}
+  .gcopy:hover{background:var(--pine-2);}
+  .gcopy.done{background:var(--kaki);}
+  @media(max-width:560px){.gstep{grid-template-columns:28px 1fr;gap:10px;}}
+
+  /* MODAL */
+  .modal{position:fixed;inset:0;z-index:100;display:none;}
+  .modal.open{display:block;}
+  .modal-bg{position:absolute;inset:0;background:rgba(20,19,15,.5);backdrop-filter:blur(3px);animation:fade .25s ease;}
+  .modal-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,92vw);max-height:88vh;overflow-y:auto;background:#fff;border-radius:10px;padding:38px 40px 34px;box-shadow:0 30px 80px -20px rgba(20,19,15,.5);animation:pop .3s cubic-bezier(.2,.7,.2,1);}
+  @media(max-width:640px){.modal-card{padding:30px 24px 26px;}}
+  @keyframes pop{from{opacity:0;transform:translate(-50%,-46%) scale(.97);}to{opacity:1;transform:translate(-50%,-50%) scale(1);}}
+  .modal-x{position:absolute;right:18px;top:16px;width:34px;height:34px;border:1px solid var(--line);background:#fff;border-radius:50%;font-size:1.1rem;color:var(--ink-soft);cursor:pointer;line-height:1;transition:.2s;}
+  .modal-x:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .m-kicker{font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--kaki);margin:0 0 4px;}
+  .m-title{font-family:var(--mincho);font-weight:700;font-size:1.5rem;letter-spacing:.03em;margin:0 0 16px;}
+  .m-body{font-size:.95rem;color:#33322b;line-height:1.95;margin:0 0 22px;}
+  .m-fig{margin:0 0 24px;border:1px solid var(--line);border-radius:8px;padding:16px;background:#FCFBF8;}
+  .m-fig svg{display:block;width:100%;height:auto;}
+  .m-plabel{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+  .m-plabel span{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.02em;color:var(--pine);}
+  .m-copy{font-family:var(--sans);font-size:.8rem;font-weight:700;color:#fff;background:var(--pine);border:none;border-radius:100px;padding:7px 16px;cursor:pointer;transition:.2s;}
+  .m-copy:hover{background:var(--pine-2);}
+  .m-copy.done{background:var(--kaki);}
+  .m-prompt{white-space:pre-wrap;font-family:var(--sans);font-size:.9rem;line-height:1.85;color:#2f2e27;background:var(--line-soft);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:0;}
+  .m-hint{font-size:.8rem;color:var(--ink-soft);margin:12px 0 0;}
+  .m-hint b{color:var(--kaki);}
+
+  /* slide nav */
+  .counter{position:fixed;right:22px;bottom:18px;z-index:40;font-family:var(--latin);font-style:italic;font-size:.8rem;color:var(--ink-soft);background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:100px;}
+  .arrows{position:fixed;right:22px;bottom:56px;z-index:40;display:flex;gap:6px;}
+  .arrows button{width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:50%;cursor:pointer;font-size:1rem;color:var(--pine);transition:.2s;}
+  .arrows button:hover{background:var(--pine);color:#fff;border-color:var(--pine);}
+  @media(max-width:640px){.arrows{display:none;}}
+
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
+  :focus-visible{outline:2px solid var(--pine);outline-offset:2px;}
+
+  /* editorial polish */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg,transparent calc(50% - .5px),rgba(31,74,56,.035) 50%,transparent calc(50% + .5px));}
+  .panel>.wrap{position:relative;}
+  .panel>.wrap::after{content:"UCHIDA MIWA — EDUCATION / AI";position:absolute;right:0;top:0;writing-mode:vertical-rl;font-family:var(--latin);font-style:italic;font-size:.58rem;letter-spacing:.17em;color:#b5b0a4;transform:translateX(30px);}
+  .home h1,.lec-title,.sec-title{text-wrap:balance;}
+  .brand::after{content:"SPECIAL ISSUE · EDUCATION × AI";display:block;font:italic .54rem var(--latin);letter-spacing:.13em;color:var(--kaki);margin-top:-3px;}
+  .home h1{position:relative;}
+  .home h1::after{content:"";display:block;width:64px;height:3px;background:var(--kaki);margin-top:22px;}
+  .home-photo{box-shadow:24px 24px 0 var(--line-soft);}
+  .home-photo::after{content:"01";position:absolute;right:14px;top:10px;font-family:var(--latin);font-style:italic;color:rgba(31,74,56,.48);font-size:1.8rem;}
+  .lec-title{max-width:18ch;}
+  .panel[id^="ai"] .wrap::before,#grow .wrap::before{content:attr(data-part);position:absolute;right:12px;top:-54px;font-family:var(--latin);font-style:italic;font-size:clamp(7rem,18vw,13rem);line-height:1;color:rgba(31,74,56,.045);pointer-events:none;}
+  .lcard{border-width:0 0 1px 0;border-radius:0;padding:26px 18px 24px 0;position:relative;box-shadow:none;}
+  .lcard::before{content:"";position:absolute;left:0;top:0;width:0;height:2px;background:var(--kaki);transition:width .28s ease;}
+  .lcard:hover{transform:none;box-shadow:none;border-color:var(--line);}
+  .lcard:hover::before,.lcard:focus-visible::before{width:100%;}
+  .lcard+.lcard{padding-left:22px;border-left:1px solid var(--line);}
+  .lnote{border-radius:0;border-left:3px solid var(--pine);padding:19px 24px;}
+  .view-toggle{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--pine);border-radius:100px;padding:7px 12px;font:700 .72rem var(--sans);cursor:pointer;white-space:nowrap;}
+  .view-toggle:hover{border-color:var(--pine);}
+  .progress{position:fixed;left:0;bottom:0;height:2px;background:var(--kaki);z-index:70;width:16.666%;transition:width .3s ease;}
+  .modal-card{border-top:4px solid var(--kaki);}
+
+  /* projection mode: keeps lecture panels on one screen */
+  body.presenting{overflow:hidden;}
+  body.presenting .panel{height:calc(100vh - var(--head-h));min-height:0;padding:clamp(24px,4vh,46px) 0 58px;overflow:auto;}
+  body.presenting .panel.active{display:flex;align-items:center;}
+  body.presenting .panel>.wrap{max-width:1180px;}
+  body.presenting .lec-title{font-size:clamp(2.4rem,5.2vw,4.6rem);margin-bottom:12px;}
+  body.presenting .lec-lead{font-size:clamp(1rem,1.8vw,1.3rem);line-height:1.7;margin-bottom:clamp(20px,3vh,34px);}
+  body.presenting .lecture-head{grid-template-columns:1.12fr .68fr;gap:38px;margin-bottom:20px;}
+  body.presenting .lecture-head .lec-lead{margin-bottom:0;}
+  body.presenting .lcard{padding-top:18px;padding-bottom:16px;}
+  body.presenting .lcard p{line-height:1.65;}
+  body.presenting .lnote{margin-top:20px;padding-top:12px;padding-bottom:12px;}
+  body.presenting .home{gap:7vw;}
+  body.presenting .manifesto{margin-bottom:18px;padding:10px 0;}
+  body.presenting .manifesto .mark{font-size:2.1rem;}
+  body.presenting .manifesto p{font-size:1.08rem;line-height:1.55;}
+  body.presenting .four-grid .lcard{min-height:0;padding-top:13px;padding-bottom:12px;}
+  body.presenting .four-grid .lcard h4{margin:4px 0 6px;font-size:1.1rem;}
+  body.presenting .four-grid .lcard p{margin-bottom:8px;font-size:.82rem;}
+
+  @media(max-width:1080px){
+    .panel>.wrap::after{display:none;}
+    .view-toggle{display:none;}
+  }
+  @media(max-width:820px){
+    body::before{display:none;}
+    .home-photo{box-shadow:12px 12px 0 var(--line-soft);}
+    .lcard+.lcard{padding-left:0;border-left:0;}
+    .four-grid{grid-template-columns:1fr;}
+    .four-grid .lcard,.four-grid .lcard:nth-child(even){min-height:0;padding:22px 0;border-left:0;border-top:1px solid var(--line);}
+    .four-grid .lcard:first-child{border-top:0;}
+    .manifesto{grid-template-columns:44px 1fr;gap:14px;}
+    .lecture-head{grid-template-columns:1fr;gap:24px;margin-bottom:30px;}
+    .chapter-art{width:min(100%,560px);box-shadow:10px 10px 0 var(--line-soft);}
+    .panel[id^="ai"] .wrap::before,#grow .wrap::before{right:22px;top:-28px;font-size:7rem;}
+  }
+  @media(max-width:640px){
+    header.top{gap:10px;}
+    .brand{max-width:132px;line-height:1.35;}
+    .tabs{scroll-snap-type:x proximity;}
+    .tab{scroll-snap-align:center;}
+    .panel{padding-top:38px;}
+    .home h1::after{margin-top:16px;}
+    .progress{display:none;}
+    .counter{right:14px;bottom:12px;}
+    .brand::after{display:none;}
+  }
+  /* Navy × sky-blue visual system */
+  :root{
+    --bg:#F4FAFF;
+    --ink:#0B1F4D;
+    --ink-soft:#536581;
+    --pine:#159DCC;
+    --pine-2:#087CA7;
+    --kaki:#59C7F5;
+    --photo:#E7F7FF;
+    --line:#CFE8F5;
+    --line-soft:#EDF8FE;
+    --mincho:"Zen Kaku Gothic New",system-ui,sans-serif;
+    --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
+    --latin:"Zen Kaku Gothic New",system-ui,sans-serif;
+  }
+  body{
+    background:
+      radial-gradient(circle at 8% 8%,rgba(89,199,245,.20),transparent 30rem),
+      radial-gradient(circle at 92% 20%,rgba(21,157,204,.12),transparent 32rem),
+      var(--bg);
+    color:var(--ink);
+  }
+  body::before{background:none;}
+  ::selection{background:var(--ink);color:#fff;}
+  header.top{background:rgba(255,255,255,.9);border-color:var(--line);box-shadow:0 10px 34px rgba(11,31,77,.07);}
+  .brand{font-weight:700;color:var(--ink);}.brand b{color:var(--pine);}
+  .brand::after{color:var(--pine);font-style:normal;}
+  .tab{border-radius:999px;padding:9px 13px;}
+  .tab:hover{background:var(--line-soft);color:var(--ink);}
+  .tab[aria-selected="true"],.tab.lec[aria-selected="true"]{background:var(--ink);color:#fff;}
+  .tab[aria-selected="true"]::after,.tab.lec[aria-selected="true"]::after{display:none;}
+  .panel{padding-top:64px;}
+  .panel>.wrap::after{color:rgba(21,157,204,.25);}
+  .panel[id^="ai"] .wrap::before,#grow .wrap::before{color:rgba(89,199,245,.10);}
+  .eyebrow,.home .kicker{color:var(--pine);}
+  .lec-kicker,.m-kicker,.gstep .gnum{color:var(--pine);}
+  .sec-title,.lec-title,.home h1,.lcard h4,.gstep h4{color:var(--ink);font-weight:700;}
+  .home h1::after{width:112px;height:5px;border-radius:99px;background:linear-gradient(90deg,var(--ink),var(--kaki));}
+  .home-photo,.prof-photo,.prog-photo,.chapter-art{border-radius:24px;border:1px solid var(--line);box-shadow:0 22px 52px rgba(11,31,77,.12);}
+  .home-photo{box-shadow:18px 18px 0 var(--photo),0 22px 52px rgba(11,31,77,.1);}
+  .chapter-art{aspect-ratio:16/9;background:#fff;box-shadow:16px 16px 0 var(--photo),0 20px 48px rgba(11,31,77,.1);}
+  .chapter-art img,.prog-photo img{filter:saturate(1.02) contrast(1);}
+  .ledger,.reach,.sns{border:0;gap:12px;background:transparent;}
+  .ledger .cell,.reach .rc,.sns a{border:1px solid var(--line)!important;border-radius:18px;background:rgba(255,255,255,.9);box-shadow:0 10px 30px rgba(11,31,77,.055);}
+  .ledger .num,.reach .big{color:var(--ink);}
+  .sns .arrow,.cred h4,.prog .tag{color:var(--pine);}
+  .sns a:hover{background:var(--photo);color:var(--ink);transform:translateY(-2px);}
+  .manifesto{border:0;border-radius:22px;padding:24px 28px;background:linear-gradient(135deg,#fff,#E7F7FF);box-shadow:0 14px 38px rgba(11,31,77,.07);}
+  .manifesto .mark{color:var(--kaki);}
+  .lcards{gap:18px;}
+  .lcard,.four-grid .lcard{border:1px solid var(--line)!important;border-radius:20px;padding:24px!important;background:rgba(255,255,255,.94);box-shadow:0 12px 34px rgba(11,31,77,.06);}
+  .lcard::before{display:none;}
+  .lcard:hover{border-color:var(--kaki)!important;transform:translateY(-4px);box-shadow:0 20px 44px rgba(11,31,77,.12);}
+  .lcard .n,.lcard .tap{color:var(--pine);}
+  .lnote{border:0;border-radius:18px;background:linear-gradient(135deg,#DFF5FF,#F5FBFF);color:var(--ink);}
+  .lnote b,.lec-lead b,.bio b{color:var(--pine);}
+  .chip{background:var(--photo);color:var(--ink);}
+  .guide-steps{gap:16px;}
+  .gstep{border:1px solid var(--line);border-radius:18px;padding:22px!important;background:#fff;box-shadow:0 10px 30px rgba(11,31,77,.05);}
+  .gprompt,.m-prompt,.m-fig{background:var(--line-soft);border-color:var(--line);}
+  .gcopy,.m-copy{background:linear-gradient(90deg,var(--ink),var(--pine));}
+  .faq details{border:1px solid var(--line)!important;border-radius:16px;padding:0 20px;margin:10px 0;background:#fff;}
+  .modal-bg{background:rgba(11,31,77,.52);}
+  .modal-card{border:0;border-top:5px solid var(--kaki);border-radius:24px;box-shadow:0 34px 90px rgba(11,31,77,.34);}
+  .view-toggle,.counter,.arrows button{border-color:var(--line);color:var(--ink);}
+  .view-toggle:hover,.arrows button:hover{background:var(--ink);border-color:var(--ink);color:#fff;}
+  .progress{height:4px;background:linear-gradient(90deg,var(--ink),var(--pine),var(--kaki));}
+  .robot-callout{display:flex;align-items:center;gap:18px;margin-top:22px;padding:14px 20px 14px 14px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 12px 34px rgba(11,31,77,.07);}
+  .robot-callout img{width:116px;height:116px;object-fit:cover;border-radius:18px;flex:0 0 auto;}
+  .robot-callout strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:4px;}
+  .robot-callout span{display:block;color:var(--ink-soft);font-size:.86rem;line-height:1.7;}
+  @media(max-width:640px){
+    .panel{padding-top:38px;}
+    .home-photo,.prof-photo,.prog-photo,.chapter-art{border-radius:18px;}
+    .lcard,.four-grid .lcard{border-radius:17px;}
+    .robot-callout img{width:88px;height:88px;}
+  }
+
+  /* Editorial profile hero */
+  #home .wrap{max-width:1080px;}
+  .home{
+    position:relative;
+    grid-template-columns:minmax(0,1fr) 300px;
+    gap:54px;
+    padding:54px 58px 50px 82px;
+    border:1px solid rgba(207,232,245,.95);
+    border-radius:32px;
+    background:rgba(255,255,255,.92);
+    box-shadow:0 28px 70px rgba(11,31,77,.11);
+    overflow:hidden;
+  }
+  .home::before{
+    content:"PROFILE";
+    position:absolute;
+    left:22px;
+    top:38px;
+    writing-mode:vertical-rl;
+    color:var(--ink);
+    font:italic 600 1.02rem/1 "Fraunces",Georgia,serif;
+    letter-spacing:.22em;
+  }
+  .home::after{
+    content:"";
+    position:absolute;
+    width:260px;height:260px;
+    right:-105px;bottom:-145px;
+    border-radius:50%;
+    background:rgba(89,199,245,.14);
+    pointer-events:none;
+  }
+  .home>div:first-child{position:relative;z-index:1;}
+  .home .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin:0;
+    font-size:.78rem;
+    line-height:1.55;
+    letter-spacing:.03em;
+    text-align:left;
+  }
+  .home .kicker::before{content:"";width:32px;height:2px;background:var(--kaki);border-radius:99px;}
+  .home .kicker em{display:block;margin-top:4px;font:italic 500 .68rem/1.4 "Fraunces",Georgia,serif;letter-spacing:.11em;color:var(--pine);}
+  .home h1{font-size:clamp(2rem,3.4vw,2.75rem);margin:18px 0 6px;letter-spacing:.06em;}
+  .home .romaji{font:italic 500 .84rem/1.4 "Fraunces",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;}
+  .home .role{margin-top:18px;font-size:.88rem;line-height:1.75;color:var(--ink);}
+  .home .lead{font-size:.9rem;line-height:1.85;margin-top:16px;}
+  .home-photo{
+    width:280px;
+    aspect-ratio:4/5;
+    justify-self:end;
+    border-radius:150px 150px 24px 24px;
+    box-shadow:13px 13px 0 var(--photo),0 20px 45px rgba(11,31,77,.12);
+    z-index:1;
+  }
+  .home-photo img{object-position:center center;}
+  .home-photo::before{
+    left:50%;bottom:12px;transform:translateX(-50%);
+    color:var(--ink);background:rgba(255,255,255,.88);
+    white-space:nowrap;font-style:normal;font-weight:700;
+  }
+  .home-photo::after{content:"MIWA";right:18px;top:17px;color:rgba(11,31,77,.32);font-size:.85rem;letter-spacing:.12em;}
+  #home .ledger{margin-top:28px;}
+  @media(max-width:760px){
+    .home{
+      grid-template-columns:1fr;
+      gap:26px;
+      padding:36px 26px 34px 52px;
+      text-align:center;
+    }
+    .home::before{left:16px;top:28px;}
+    .home .kicker{justify-content:center;}
+    .home h1{font-size:2rem;margin-top:14px;}
+    .home h1::after{margin:15px auto 0;}
+    .home .lead{max-width:34ch;margin-left:auto;margin-right:auto;}
+    .home-photo{
+      grid-row:1;
+      width:160px;
+      justify-self:center;
+      border-radius:90px 90px 18px 18px;
+      box-shadow:9px 9px 0 var(--photo),0 16px 32px rgba(11,31,77,.1);
+    }
+    .home-photo::before{font-size:.62rem;bottom:8px;}
+    .home-photo::after{display:none;}
+  }
+  @media(max-width:420px){
+    .home{padding:30px 20px 30px 42px;border-radius:24px;}
+    .home-photo{width:148px;}
+    .home .role{font-size:.8rem;}
+    .home .lead{font-size:.84rem;text-align:left;}
+  }
+</style>
+<link rel="stylesheet" href="profile.css">
+<script src="profile.js" defer></script>
+</head>
+<body>
+<a class="profile-skip" href="#profile-main">本文へ移動</a>
+<header class="top"><a class="brand" href="index.html">おやこ脳ラボへ ↗</a><nav class="tabs" role="tablist" aria-label="プロフィールの項目">
+<button class="tab" id="tab-home" role="tab" aria-controls="home" aria-selected="true" data-panel="home">自己紹介</button>
+<button class="tab" id="tab-about" role="tab" aria-controls="about" aria-selected="false" tabindex="-1" data-panel="about">経歴・教室</button>
+<button class="tab" id="tab-support" role="tab" aria-controls="support" aria-selected="false" tabindex="-1" data-panel="support">AIを活用したサポート</button>
+<button class="tab" id="tab-media" role="tab" aria-controls="media" aria-selected="false" tabindex="-1" data-panel="media">メディア・登壇・講演実績</button>
+</nav></header><main id="profile-main">
+    <!-- 1. HOME + 発信 -->
+    <section class="panel active" id="home" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+      <div class="wrap">
+        <div class="home">
+          <div>
+            <p class="kicker"><span>さいたま市<br />脳科学に基づく幼児教育<em>Brain-based Early Education</em></span></p>
+            <h1>内田 美和</h1>
+            <p class="romaji">Miwa Uchida</p>
+            <p class="role">脳育・知育教室 SproutUp 代表<br />EnglishPlaypark♪ 英語担当<br />みらいLab サポーター</p>
+            <p class="lead">現場約30年、5,500組以上の親子と歩んできた教育者。<br />教室運営は、AIで動かしているエンジニア。<br /><b>脳科学も、子育ても、コードも書きます。</b></p>
+          </div>
+          <div class="home-photo"><img src="assets/profile-b24e9b428c.webp" alt="白衣姿で微笑む内田美和" /></div>
+        </div>
+        <div class="ledger">
+          <div class="cell"><div class="num"><small>約</small>30<small>年</small></div><div class="lbl">現場歴</div></div>
+          <div class="cell"><div class="num">5,500<small>組以上</small></div><div class="lbl">ご家族</div></div>
+          <div class="cell"><div class="num">5<small>教室</small></div><div class="lbl">さいたま市内</div></div>
+          <div class="cell"><div class="num">10<small>+</small></div><div class="lbl">保有資格</div></div>
+        </div>
+        <div class="block">
+          <p class="eyebrow">SNS・リンク</p>
+          
+          <div class="sns">
+            <a href="https://www.threads.com/@miwa_noiku" target="_blank" rel="noopener"><span class="name">Threads</span><span class="handle">@miwa_noiku</span><span class="arrow">↗</span></a>
+            <a href="https://note.com/miwa_noiku" target="_blank" rel="noopener"><span class="name">note</span><span class="handle">脳育あそび</span><span class="arrow">↗</span></a>
+            <a href="https://lin.ee/z6kE2tw" target="_blank" rel="noopener"><span class="name">LINE公式</span><span class="handle">ご案内 / 診断</span><span class="arrow">↗</span></a>
+            <a href="https://www.instagram.com/miwa_noiku/" target="_blank" rel="noopener"><span class="name">Instagram</span><span class="handle">@miwa_noiku</span><span class="arrow">↗</span></a>
+            <a href="https://substack.com/@miwanoiku" target="_blank" rel="noopener"><span class="name">Substack</span><span class="handle">教育者 / AI向け</span><span class="arrow">↗</span></a>
+            <a href="https://ameblo.jp/miwa-sproutup/" target="_blank" rel="noopener"><span class="name">Ameblo</span><span class="handle">ブログ</span><span class="arrow">↗</span></a>
+            <a href="https://sprout-up.com/" target="_blank" rel="noopener"><span class="name">クラス公式HP</span><span class="handle">SproutUp</span><span class="arrow">↗</span></a>
+            <a href="https://www.asahi.com/articles/AST6R2RP1T6RUTNB00YM.html" target="_blank" rel="noopener"><span class="name">朝日新聞</span><span class="handle">掲載記事</span><span class="arrow">↗</span></a>
+            <a href="https://www.asahi.com/articles/photo/AS20250623003146.html?iref=pc_photo_gallery_prev_arrow" target="_blank" rel="noopener"><span class="name">朝日新聞</span><span class="handle">写真ギャラリー</span><span class="arrow">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 経歴・教室 -->
+    <section class="panel" id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0" hidden>
+      <div class="wrap">
+        <p class="eyebrow">01 プロフィール</p>
+        <h2 class="sec-title">現場に立ちながら、教室の仕組みも自分でつくっています。</h2>
+        <div class="prof">
+          <div class="prof-photo"><img src="assets/profile-c8e6ebd3ca.webp" alt="子どもと一緒に調理科学を学ぶ内田美和" /></div>
+          <div class="bio">
+            <p>0歳から小学生を対象とした脳育・知育教室 SproutUp の代表。五感を刺激する感覚遊びと知育アクティビティを両輪にした、少人数制のハイブリッド親子教室を、さいたま市内5拠点で主宰しています。</p>
+            <p>私立進学中高などで6年間の家庭科教員を務めたのち、幼児教育の道へ。<b>栄養士</b>としての離乳食・食育指導、<b>調理科学の大学院修士</b>で培った専門技術と視野、<b>ブレインアナリスト</b>としての脳科学に裏づけられた声がけを、一つのカリキュラムに束ねてきました。かつての教え子が、自分の子を連れて来る。その積み重ねが <b>現場約30年・5,500組以上</b> です。</p>
+            <div class="cred">
+              <h4>資格・経歴</h4>
+              <ul><li>専修 教員免許状（家庭・保健）</li><li>栄養士 ／ 食育指導士</li><li>知育インストラクター</li><li>ブレインアナリスト</li><li>英語リトミック講師資格</li><li>リズム英会話講師資格</li><li>さいたま市教育委員会 認定指導者</li></ul>
+              <ul><li>埼玉県教育委員会 認定講師</li><li>調理科学 大学院修士 修了</li><li>中・高・専門学校 家庭科教員（6年）</li><li>EnglishPlaypark♪（2010–）</li><li>教育委員会委託 食育・実習講師</li><li>みらいLabサポーター（イベント講師・保育園監修・システム設営）</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <p class="eyebrow">02 よくある質問</p>
+          <h2 class="sec-title">よく聞かれること。</h2>
+          <div class="faq">
+            <details open><summary><span class="qmark">Q.</span>なぜ「脳科学 × 子育て」なんですか？</summary><div class="ans">脳の発達段階を知っているだけで、叱り方も、待ち方も、ほめる言葉も変わります。特別なテクニックより"仕組みを知る"ことのほうが、子育てをずっとラクにしてくれる——現場で何度も見てきたからです。</div></details>
+            <details><summary><span class="qmark">Q.</span>栄養や調理の知識も指導に活かせるの？</summary><div class="ans">はい、そこが特色です。離乳食のアドバイスから、食品由来の感覚遊び、小学生の応用調理まで。「食べる・つくる」を科学として扱うと、思考力・表現力・チームワークが自然に育ちます。</div></details>
+            <details><summary><span class="qmark">Q.</span>教室の運営に、AIをどう使っているの？</summary><div class="ans">予約・欠席連絡・カリキュラム管理、LINE配信、SNSコンテンツ制作までを自作の仕組みで自動化。GAS・Make・LINE Messaging API・Claude Code を組み合わせ、いわば"AI従業員チーム"を編成しています。専門職ひとりでも、ここまで回せます。</div></details>
+          </div>
+        </div>
+        <div class="block">
+          <p class="eyebrow">03 教室紹介</p>
+          <h2 class="sec-title">主宰・担当している教室。</h2>
+          <div class="prog">
+            <div class="prog-photo"><img src="assets/profile-1d67cd7669.webp" alt="ティッシュを使った感覚遊びを楽しむ子どもたち" /></div>
+            <div class="prog-head"><div class="tag">脳育・知育</div><h3>SproutUp</h3><div class="meta">0歳〜小学生 / 少人数制</div></div>
+            <div><p>五感を刺激する脳育あそびを、学びにつなげる。感覚遊び・製作・実験・調理科学を年齢に合わせて設計。小学生は「頭がよくなるお料理教室」。</p><div class="chips"><span class="chip">プラザノース（北区）</span><span class="chip">どれみリズム（大宮区）</span><span class="chip">みらいLab（見沼区）</span></div></div>
+          </div>
+          <div class="prog">
+            <div class="prog-photo"><img src="assets/profile-af078feabb.webp" alt="グランドピアノの前に立つEnglishPlayparkの講師" /></div>
+            <div class="prog-head"><div class="tag">英語リトミック</div><h3>EnglishPlaypark♪</h3><div class="meta">0〜3歳 親子 / since 2001</div></div>
+            <div><p>プロの生演奏とグランドピアノで、本物の音に触れながら英語で遊ぶ親子クラス。公共施設利用でお月謝も抑えめ。0歳クラスはおねんね撮影会つき。</p><div class="chips"><span class="chip">北区（月）</span><span class="chip">上尾市（火）</span><span class="chip">生ピアノ</span></div></div>
+          </div>
+          <div class="prog">
+            <div class="prog-photo"><img src="assets/profile-43cef9c5f6.webp" alt="親子が輪になって参加する教室風景" /></div>
+            <div class="prog-head"><div class="tag">地域の子育て拠点</div><h3>みらいLab</h3><div class="meta">見沼区大和田 / サポーター</div></div>
+            <div><p>「好き」を見つける喜びと挑戦する勇気を育む次世代子育て支援センター。講座開催のほか、チラシ制作・予約管理を担当。</p><div class="chips"><span class="chip">講座開催</span><span class="chip">こども食堂</span><span class="chip">FMルピナス大宮</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="panel" id="support" role="tabpanel" aria-labelledby="tab-support" tabindex="0" hidden><div class="wrap">
+<p class="eyebrow">AIを活用したサポート</p><h2 class="sec-title">親子に向き合う時間を、<br>日々の工夫から。</h2>
+<div class="bio"><p>子育てや教育の現場で、AIをどのように役立てられるか。実際の教室運営での経験をもとに、AIの活用をサポートしています。</p><p>教室での活動と、予約やお知らせなど日々の運営。その両方に関わる立場から、身近な使い方を一緒に考えます。</p></div>
+<div class="block"><h3 class="sec-title">取り組んでいること</h3>
+<div class="support-grid"><article><h3>子育て・教育の中での活用</h3><p>親子の活動や教室での経験を入り口に、AIの使い方を紹介する講座・サポートを行っています。</p></article>
+<article><h3>教室運営の仕組みづくり</h3><p>予約・欠席連絡・カリキュラム管理・LINE配信など、日々の運営にAIや自作の仕組みを取り入れています。</p></article>
+<article><h3>発信・お知らせづくり</h3><p>SNSの発信やチラシ制作など、必要な情報を届けるための工夫も実践しています。</p></article></div></div>
+<div class="block"><h3 class="sec-title">開催・サポートのご案内</h3><p>開催内容や相談については、公式LINEからお問い合わせください。</p><a class="profile-link" href="https://lin.ee/z6kE2tw" target="_blank" rel="noopener noreferrer">公式LINEで問い合わせる ↗</a></div>
+</div></section>
+<section class="panel" id="media" role="tabpanel" aria-labelledby="tab-media" tabindex="0" hidden><div class="wrap">
+<p class="eyebrow">メディア・登壇・講演実績</p><h2 class="sec-title">教室から、地域へ。<br>子育てと学びを伝える活動。</h2>
+<div class="activity-item"><p class="eyebrow">メディア掲載</p><h3>朝日新聞</h3><p>掲載記事と写真ギャラリーをご覧いただけます。</p><div class="activity-links"><a class="profile-link" href="https://www.asahi.com/articles/AST6R2RP1T6RUTNB00YM.html" target="_blank" rel="noopener noreferrer">掲載記事を読む ↗</a><a class="profile-link" href="https://www.asahi.com/articles/photo/AS20250623003146.html?iref=pc_photo_gallery_prev_arrow" target="_blank" rel="noopener noreferrer">写真ギャラリー ↗</a></div></div>
+<div class="activity-item"><p class="eyebrow">講師活動</p><h3>教育委員会委託の食育・実習講師</h3><p>栄養・食育・調理科学の専門性を生かした、食育や実習の講師活動。</p></div>
+<div class="activity-item"><p class="eyebrow">地域での講座・イベント</p><h3>みらいLabでの講師・サポート活動</h3><p>子育て支援の場でのイベント講師、保育園監修、運営の仕組みづくりなどに携わっています。</p></div>
+<div class="block"><h3 class="sec-title">取材・講演のご相談</h3><p>ご相談は公式LINEからお寄せください。</p><a class="profile-link" href="https://lin.ee/z6kE2tw" target="_blank" rel="noopener noreferrer">相談する ↗</a></div>
+</div></section></main>
+<footer class="profile-footer"><a href="index.html">おやこ脳ラボへ戻る</a><p>© 2026 SproutUp 監修：内田美和</p></footer></body></html>
