@@ -30,7 +30,7 @@
     $('home-content').hidden=state.browse;$('results').hidden=!state.browse;
     if(!state.browse)return;
     const result=filtered();
-    const edition=({感情:['01','FEELINGS'],行動:['02','LITTLE ACTIONS'],生活:['03','EVERYDAY'],友達:['04','TOGETHER'],学び:['05','DISCOVERY'],親子関係:['06','YOU & ME']})[state.category]||['30','OUR LITTLE QUESTS'];
+    const edition=({感情:['01','FEELINGS'],行動:['02','LITTLE ACTIONS'],生活:['03','EVERYDAY'],友達:['04','TOGETHER'],学び:['05','DISCOVERY'],親子関係:['06','YOU & ME']})[state.category]||[String(themes.length),'OUR LITTLE QUESTS'];
     const categoryArtwork=({感情:'feelings',行動:'actions',生活:'everyday',友達:'friends',学び:'learning',親子関係:'relationship'})[state.category];
     $('category-editorial').innerHTML=`<span class="edition-number">${edition[0]}</span><span class="edition-english">${edition[1]}</span><img src="assets/${categoryArtwork ? `category-${categoryArtwork}` : 'parent-child-watercolor'}.png" alt="" width="1536" height="1024">`;
     $('results-title').textContent=state.q?`「${state.q}」の検索結果`:(state.category||'すべてのテーマ');

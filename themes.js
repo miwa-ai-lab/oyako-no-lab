@@ -12,6 +12,52 @@ window.LAB_SOURCES = {
 };
 // id, category, title, ages (indices), tags, concern, perspective, first action,
 // words, observations, related IDs, background sources, optional safety note.
+Object.assign(window.LAB_SOURCES, {
+  "early-signs": {
+    "title": "米国小児科学会｜発達と普段のやり取りを見る",
+    "url": "https://www.healthychildren.org/English/health-issues/conditions/Autism/Pages/Early-Signs-of-Autism-Spectrum-Disorders.aspx"
+  },
+  "tips-talking": {
+    "title": "Alder Hey NHS｜ことばを育む関わり",
+    "url": "https://www.alderhey.nhs.uk/conditions/patient-information-leaflets/tips-for-talking/"
+  },
+  "milestones-15": {
+    "title": "CDC｜15か月頃の発達の目安",
+    "url": "https://www.cdc.gov/act-early/milestones/15-months.html"
+  },
+  "milestones-18": {
+    "title": "CDC｜18か月頃の発達の目安",
+    "url": "https://www.cdc.gov/act-early/milestones/18-months.html"
+  },
+  "baby-communication": {
+    "title": "NHS｜赤ちゃんとのコミュニケーション",
+    "url": "https://www.cambspborochildrenshealth.nhs.uk/speech-language-and-communication/communicating-with-your-baby/"
+  },
+  "family-consultation": {
+    "title": "国立障害者リハビリテーションセンター｜家族の相談",
+    "url": "https://www.rehab.go.jp/ddis/howto/diagnosis/family/"
+  },
+  "early-years": {
+    "title": "CDC｜幼児期を理解する",
+    "url": "https://www.cdc.gov/parenting-toddlers/understanding-the-early-years/index.html"
+  },
+  "toddler-emotions": {
+    "title": "NHS｜幼児の感情を支える",
+    "url": "https://www.nhs.uk/best-start-in-life/toddler/help-your-toddler-with-their-emotions/"
+  },
+  "play-learning": {
+    "title": "米国小児科学会｜幼児は遊びから学ぶ",
+    "url": "https://www.healthychildren.org/English/family-life/power-of-play/Pages/young-children-learn-a-lot-when-they-play.aspx"
+  },
+  "milestones-30": {
+    "title": "CDC｜30か月頃の発達の目安",
+    "url": "https://www.cdc.gov/act-early/milestones/30-months.html"
+  },
+  "aggressive-behavior": {
+    "title": "米国小児科学会｜攻撃的な行動への対応",
+    "url": "https://www.healthychildren.org/English/ages-stages/toddler/Pages/Aggressive-Behavior.aspx"
+  }
+});
 const rows = [
 ['crying','感情','泣いている理由が分からない',[1,2],'泣く,赤ちゃん,乳児,ぐずる',
 '抱っこしても泣きやまず、何をしてほしいのか分からない。',
@@ -200,6 +246,8 @@ const rows = [
 '自分が落ち着いてから、言い方について短く謝る。',
 '「大きな声で怒ってごめんね。怖かったね。次は少し落ち着いてから話すね」',
 'すぐに許すことや抱きつくことを求めず、子どもの反応や距離を尊重しましょう。','regret,tantrum,praise','discipline']
+,["hand-leading","行動","大人の手を引いて「やって」と伝えるとき",[1,2],"手を引く,クレーン現象,ことば,身ぶり,指さし,お願い,コミュニケーション","大人の手を引いたり、物に手を置かせたりする。そのまま手伝っていいの？","ことばが育つ途中は、声・表情・身ぶりも大切な伝え方です。大人の手を使う行動は「クレーン現象」と呼ばれることもありますが、これだけで発達の状態は判断できません。指さしや「見て」と物を見せるなど、普段のやり取り全体も見てみましょう。要求の指さしは15か月頃、興味を共有する指さしは18か月頃の目安がありますが、診断基準でも、相談を待つ期限でもありません。保護者の関わりが悪いと決めつける必要はありません。","安全なお願いなら、「あけて」「とって」と短い言葉を添えて手伝う。","手がふたへ向いたら「あけて、だね」。開けて「あいたね」。","助けを求める前後の声・表情・身ぶりや、普段の指さし、物を見せるやり取りを見てみましょう。発語・指さし・目線を、手伝う条件にしません。","play,separation,instructions","early-signs,tips-talking,milestones-15,milestones-18,baby-communication,family-consultation","小さな部品や指を挟むふたは避けます。ほかの伝え方が少ない、呼びかけへの反応が心配な時は、健診を待たず小児科や保健師へ相談してください。以前にあった言葉・身ぶりが減った時は早めに相談を。ここは一般情報で、個別の評価・診断は医療機関で行います。QUESTは資料の支援原則を日常場面に応用した提案で、検証済みの治療や確実な効果を示すものではありません。"],
+["play-wishes","友達","お友達との「こうしたかった」がぶつかったら",[2,3],"友達,お友達,2歳,3歳,遊び,積み木,泣く,怒る,手伝って,仲立ち","お友達が物を動かしたり、違う遊び方をしたりすると、泣いたり怒ったりする。","自分の希望を持ちながら、切り替えや伝え方を学ぶ途中です。主に2〜3歳の場面を想定し、3〜6歳向けのアレンジも紹介します。興奮している時は長い説明が難しいことも。「積み木の場所が変わった」という事実と、「そのままにしたかったのかな」という希望を分け、相手の意図や本人の気持ちを断定しません。安全と落ち着くための援助を先にします。","機嫌のよい時に、大人を呼ぶ「手伝って」や、大人の手にそっと触れる合図をひとつ練習する。","「積み木が動いたね」「ここに置いておきたかったのかな」「一緒に考えよう」。落ち着いてから「ここで続ける？ 少し離れて遊ぶ？」。","呼び方や大人が近づいた時の反応を見てみましょう。直前の事実、本人の希望、眠気・空腹・音・人数、続いた時間、助けになったことを分けて確認します。他の子の順番も尊重し、実際に取る・壊す行動は別に対応します。","friends,hitting,tantrum,switching","early-years,toddler-emotions,play-learning,milestones-30,aggressive-behavior","叩く・押す・投げる時は危険な物を離し、距離を取り、大人が間に入って短く「叩かないよ」と伝えます。罰としての拘束や、わざと困らせる練習はしません。興奮中に共有や謝罪を強要せず、けがの手当てを優先します。落ち着いてから気遣いや謝り方を一緒に学びます。生活・友達関係への大きな支障、けが、獲得した能力の喪失、保護者の対応の限界がある時は、年齢を待たず小児科や地域の発達相談へ。ここは一般情報で、個別の評価・診断は医療機関で行います。QUESTは資料の支援原則を日常場面に応用した提案で、検証済みの治療ではなく、癇癪の防止や確実な効果を保証しません。"]
 ];
 window.LAB_THEMES = rows.map(([id,category,title,ages,tags,concern,perspective,action,words,observe,related,sources,safety]) => ({
   id,category,title,ages:ages.map(i=>window.LAB_AGES[i]),tags:tags.split(','),concern,perspective,action,words,observe,
